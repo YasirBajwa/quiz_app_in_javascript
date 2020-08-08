@@ -53,8 +53,23 @@ Questions = [
 
 
 let counter = 0 ;
+let score = 0;
 
 function nextQuestion(){
+
+    if(counter == Questions.length - 1){
+        location.href= 'score.html';
+        return;
+    }
+
+    let user_ans = document.querySelector('li.option.active').innerHTML;
+    if(user_ans == Questions[counter].answer ){
+         score += 10;
+         sessionStorage.setItem('score',score);
+    }
+    
+    console.log(score)
+
     counter++;
     showQuestion(counter);
 }
@@ -66,6 +81,7 @@ function showQuestion(count){
 
        question.innerHTML = `<h2>${Questions[count].question}</h2>
        <ul class="option-group">
+       
                   <li class="option">${Questions[count].options[0]}</li>
                   <li class="option">${Questions[count].options[1]}</li>
                   <li class="option">${Questions[count].options[2]}</li>
@@ -73,8 +89,23 @@ function showQuestion(count){
         </ul>
        
        
-       `
+       `;
+       toggle();
+}
 
+function toggle (){
+     let options = document.querySelectorAll("li.option");
+
+     for(let i= 0; i < options.length; i++){
+              options[i].onclick= function(){
+                for( var j = 0 ; j < options.length; j++){
+                    if(options[j].classList.contains("active")){
+                        options[j].classList.remove("active");
+                    }
+                }
+                  options[i].classList.add("active")
+              }
+     }
 }
 
 

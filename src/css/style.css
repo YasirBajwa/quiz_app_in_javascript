@@ -5,11 +5,11 @@
 }
 @font-face{
     font-family: 'lato';
-    src: url(/src/fonts/Lato-Regular.ttf);
+    /* src: url(/src/fonts/Lato-Bold.ttf); */
 }
 
 body{
-    font-family: 'lato';
+    font-family: Arial, Helvetica, sans-serif
 }
 
 
@@ -136,4 +136,21 @@ body{
     background-color: #fff;
     color: #341f97;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+}
+
+.active{
+    background-color:#341f97;
+    color: #fff !important;
+}
+
+.award_icon{
+    font-size: 300px;
+    color: #fff;
+
+}
+.user_name,.user_score,.user_time{
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+
 }

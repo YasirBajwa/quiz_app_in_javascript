@@ -19,7 +19,7 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #341f97;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,37,37,1) 0%, rgba(211,49,49,1) 82.8% );
 }
 
 .welcome-text{
@@ -49,7 +49,7 @@ body{
     padding: 15px 0;
     border: none;
     border-radius: 27px;
-    color: #341f97;
+    color: rgba(226,37,37,1);
     transition: 0.4s all;
 }
 
@@ -94,7 +94,7 @@ body{
     display: flex;
     align-items: center;
     padding:0 30px;
-    background-color: #341f97;
+    background-color: rgba(226,37,37,1);
     color: #fff;
 }
 
@@ -116,11 +116,11 @@ body{
 .option:hover{
 
     cursor: pointer;
-    border: 2px solid #341f97;
+    border: 2px solid rgba(226,37,37,1);
 }
 
 .btn-next{
-    background-color:#341f97;
+    background-color:rgba(226,37,37,1);
     color: white;
     padding: 15px 35px;
     border: none;
@@ -134,12 +134,12 @@ body{
 .btn-next:hover{
     cursor: pointer;
     background-color: #fff;
-    color: #341f97;
+    color: rgba(226,37,37,1);
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
 }
 
 .active{
-    background-color:#341f97;
+    background-color:rgba(226,37,37,1);
     color: #fff !important;
 }
 

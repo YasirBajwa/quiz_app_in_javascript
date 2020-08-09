@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link rel="stylesheet" href="src/css/style.css">
     <title>Your Score</title>
 </head>
@@ -11,11 +13,15 @@
 
 <div class="wrapper">
     <div>
-    <i class="fa fa-award award_icon"></i>
-    <h2 class="user_name">Student Name : <span id="user-name"></span></h2>
+   
+    <h5 class="user_name">Student Name : <span id="user-name"></span></h5>
     <p class="user_score">Your Score : <span class="score" id="user-score"></span></p>
     <p class="user_time">Time Taken : <span class="time">0 minute 15 seconds</span></p>
+    <button class="btn btn-primary" onclick="retake()">RETAKE QUIZ</button>
+
     </div>
+
+    
 </div>
 
 

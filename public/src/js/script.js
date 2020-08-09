@@ -70,6 +70,8 @@ function nextQuestion(){
     
 
     if(counter == Questions.length - 1){
+        sessionStorage.setItem("time",`${minutes} minutes and ${seconds} seconds`);
+        clearInterval(user_all_time);
         location.href= 'score.html';
         return;
     }
@@ -87,7 +89,7 @@ function showQuestion(count){
        let question = document.getElementById('questions');
 
        question.innerHTML = ` <h2> Q${counter+1 }. ${Questions[count].question}</h2>
-       <ul class="option-group">
+              <ul class="option-group">
        
                   <li class="option">${Questions[count].options[0]}</li>
                   <li class="option">${Questions[count].options[1]}</li>
@@ -121,12 +123,15 @@ function formSubmit(e){
     
     let user_name = document.forms['welcome-form']['username'].value;
     sessionStorage.setItem('user_name',user_name);
-
+    let quiz_user_name = document.getElementById('input-user-name').value;
+    if(quiz_user_name === ''){
+        alert('Enter Your name first');
+        return false;
+    }
     location.href = "quiz.html"
     
-    console.log(user_name);
-
-
-
+    // console.log(user_name);
 
 }
+
+

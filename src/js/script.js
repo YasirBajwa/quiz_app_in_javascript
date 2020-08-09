@@ -57,18 +57,25 @@ let score = 0;
 
 function nextQuestion(){
 
-    if(counter == Questions.length - 1){
-        location.href= 'score.html';
-        return;
-    }
-
     let user_ans = document.querySelector('li.option.active').innerHTML;
     if(user_ans == Questions[counter].answer ){
          score += 10;
          sessionStorage.setItem('score',score);
     }
+    else{
+        score;
+        sessionStorage.setItem('score',score);
+
+    }
     
-    console.log(score)
+
+    if(counter == Questions.length - 1){
+        location.href= 'score.html';
+        return;
+    }
+
+   
+    // console.log(score)
 
     counter++;
     showQuestion(counter);
@@ -79,7 +86,7 @@ function showQuestion(count){
 
        let question = document.getElementById('questions');
 
-       question.innerHTML = `<h2>${Questions[count].question}</h2>
+       question.innerHTML = ` <h2> Q${counter+1 }. ${Questions[count].question}</h2>
        <ul class="option-group">
        
                   <li class="option">${Questions[count].options[0]}</li>
